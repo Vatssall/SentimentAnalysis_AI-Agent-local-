@@ -1,0 +1,57 @@
+:root{
+  --bg:#0f1216; --panel:#12171d; --panel-2:#0b0f15; --border:#1e2630;
+  --text:#e8eef7; --muted:#9fb0c3; --accent:#4f9cff; --accent-2:#9b59ff;
+  --danger:#ff5c7a; --ok:#29d38c; --chip-bg:#1a2230;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid var(--border);background:#0b0e12;position:sticky;top:0;z-index:3}
+.brand{font-weight:700;letter-spacing:.3px}
+.right{display:flex;gap:8px}
+button{border:1px solid var(--border);background:transparent;color:var(--text);padding:8px 12px;border-radius:10px;cursor:pointer;transition:all .15s ease}
+button.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none}
+button.ghost:hover{background:#12161d}
+button:disabled{opacity:.6;cursor:not-allowed}
+button.full{width:100%}
+
+main{display:grid;grid-template-columns:280px 1fr;min-height:calc(100vh - 48px)}
+aside#sidebar{border-right:1px solid var(--border);padding:12px;background:var(--panel-2)}
+.side-top{padding:6px 4px}
+.list{margin-top:8px;display:flex;flex-direction:column;gap:6px}
+.session{border:1px solid var(--border);border-radius:10px;padding:10px;background:var(--panel);cursor:pointer;display:flex;justify-content:space-between;gap:6px}
+.session:hover{border-color:var(--accent)}
+.session.active{outline:2px solid var(--accent)}
+.session .title{font-weight:600}
+.session .preview{font-size:12px;color:var(--muted)}
+.session .actions{display:flex;gap:6px}
+
+#chat-pane{display:flex;flex-direction:column;height:calc(100vh - 48px)}
+#chat-header{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);padding:10px 14px;background:#0b0e12}
+#chat-title{font-size:16px;font-weight:700;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--text);padding:6px 10px;min-width:40%}
+#status{color:var(--muted);font-size:12px}
+
+#chat{flex:1;overflow:auto;padding:18px;display:flex;flex-direction:column;gap:12px}
+.msg{display:flex;gap:10px;align-items:flex-start}
+.msg .avatar{width:34px;height:34px;border-radius:50%;background:#1f2834;border:1px solid var(--border)}
+.msg.user .avatar{background:linear-gradient(180deg,var(--accent),#2e6bff)}
+.msg.assistant .avatar{background:linear-gradient(180deg,#6a5cff,var(--accent-2))}
+.bubble{max-width:70%;background:var(--panel);border:1px solid var(--border);padding:10px 12px;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.msg.user .bubble{background:#0c141f}
+.content{white-space:pre-wrap}
+.time{margin-top:6px;color:var(--muted);font-size:11px}
+.chips{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.chip{padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:var(--chip-bg);font-size:11px}
+.chip.sentiment{border-color:var(--ok)}
+.chip.emotion{border-color:var(--accent)}
+.chip.mood{border-color:var(--accent-2)}
+
+#composer{display:flex;gap:8px;padding:12px;border-top:1px solid var(--border);background:#0b0f15}
+#input{flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);background:#0c141f;color:var(--text)}
+#send{min-width:100px}
+
+/* inline therapy task cards (shown under assistant bubbles) */
+.task{
+  margin-top:10px;border:1px solid var(--border);border-radius:12px;background:#121a24;padding:12px;
+}
+.task .mins{opacity:.7;margin-left:6px}

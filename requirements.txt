@@ -1,0 +1,17 @@
+pandas
+scikit-learn
+joblib
+fastapi
+uvicorn
+pydantic
+requests
+ollama
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
+jinja2
+datasets
+setfit
+transformers
+accelerate
+torch

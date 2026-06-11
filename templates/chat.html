@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Local Agent</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Local Agent</div>
+    <div class="right">
+      <button class="ghost" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <aside id="sidebar">
+      <div class="side-top">
+        <button class="primary full" onclick="newChat()">+ New chat</button>
+      </div>
+      <div id="sessions" class="list"></div>
+    </aside>
+
+    <section id="chat-pane">
+      <div id="chat-header">
+        <input id="chat-title" value="Chat" onblur="renameActive()" />
+        <div id="status"></div>
+      </div>
+
+      <div id="chat"></div>
+
+      <div id="composer">
+        <input id="input" placeholder="Type a message…" onkeydown="if(event.key==='Enter') send()" />
+        <button id="send" class="primary" onclick="send()">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <template id="msg-template">
+    <div class="msg">
+      <div class="avatar"></div>
+      <div class="bubble">
+        <div class="content"></div>
+        <div class="chips"></div>
+        <div class="time"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="/static/chat.js"></script>
+</body>
+</html>

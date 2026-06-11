@@ -1,0 +1,12 @@
+# Large AI/ML folders
+models/
+checkpoints/
+data/
+
+# Mac OS files
+.DS_Store
+
+# Text editor settings
+.vscode/
+
+venv/ __pycache__/ *.pyc models/ reports/ .DS_Store

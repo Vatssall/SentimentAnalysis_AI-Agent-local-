@@ -1,0 +1,30 @@
+CSV: /Users/vatsal/ml-agent/data/clean/sentiment.clean.csv
+Task: sentiment
+Rows: 51090
+Classes: 7
+Test size (int): 12772
+
+Classification report:
+                      precision    recall  f1-score   support
+
+             anxiety     0.7282    0.8278    0.7748       906
+             bipolar     0.6923    0.7632    0.7260       625
+          depression     0.7849    0.6162    0.6904      3773
+              normal     0.9007    0.9162    0.9084      4010
+personality disorder     0.5474    0.5670    0.5570       224
+              stress     0.4906    0.6841    0.5714       573
+            suicidal     0.6813    0.7632    0.7200      2661
+
+            accuracy                         0.7654     12772
+           macro avg     0.6894    0.7340    0.7069     12772
+        weighted avg     0.7738    0.7654    0.7651     12772
+
+
+Confusion matrix:
+[[ 750   26   27   38   13   49    3]
+ [  17  477   46   23   14   38   10]
+ [ 134  117 2325  173   46  106  872]
+ [  31   19   55 3674   17  173   41]
+ [  14   10   28   14  127   21   10]
+ [  77   27   37   11   15  392   14]
+ [   7   13  444  146    0   20 2031]]

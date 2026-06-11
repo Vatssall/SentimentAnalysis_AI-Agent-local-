@@ -1,0 +1,40 @@
+CSV: /Users/vatsal/ml-agent/data/clean/mood.clean.csv
+Task: mood
+Rows: 40
+Classes: 13
+Test size (int): 13
+
+Classification report:
+              precision    recall  f1-score   support
+
+   amusement     0.0000    0.0000    0.0000         1
+         awe     0.0000    0.0000    0.0000         1
+   confusion     0.0000    0.0000    0.0000         1
+    contempt     0.0000    0.0000    0.0000         1
+   curiosity     0.0000    0.0000    0.0000         1
+        fear     0.0000    0.0000    0.0000         1
+         joy     0.0000    0.0000    0.0000         1
+   nostalgia     0.0000    0.0000    0.0000         1
+    optimism     0.0000    0.0000    0.0000         0
+       other     0.4000    0.6667    0.5000         3
+     sadness     0.0000    0.0000    0.0000         1
+       trust     0.0000    0.0000    0.0000         1
+
+    accuracy                         0.1538        13
+   macro avg     0.0333    0.0556    0.0417        13
+weighted avg     0.0923    0.1538    0.1154        13
+
+
+Confusion matrix:
+[[0 0 0 0 0 0 0 0 0 0 1 0]
+ [0 0 0 0 0 0 0 0 1 0 0 0]
+ [0 0 0 0 0 0 0 0 0 1 0 0]
+ [0 0 0 0 0 0 0 0 0 0 1 0]
+ [0 0 0 0 0 0 0 0 0 0 0 1]
+ [0 1 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0 0 1 0 0]
+ [0 0 0 0 0 0 0 0 0 1 0 0]
+ [0 0 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 1 0 0 2 0 0]
+ [0 0 1 0 0 0 0 0 0 0 0 0]
+ [0 1 0 0 0 0 0 0 0 0 0 0]]

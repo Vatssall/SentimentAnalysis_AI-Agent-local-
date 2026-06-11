@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Welcome • Local Agent</title>
+  <link rel="stylesheet" href="/static/login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrap">
+    <!-- Left side: brand/teaser -->
+    <section class="hero">
+      <div class="glass">
+        <h1>Local Agent</h1>
+        <p>Your private, on-device AI with emotion & mood awareness.</p>
+        <ul class="bullets">
+          <li>Secure local inference</li>
+          <li>Session history & memory</li>
+          <li>Custom ML classifiers</li>
+        </ul>
+      </div>
+      <div class="footer-note">Running on your machine • 127.0.0.1</div>
+    </section>
+
+    <!-- Right side: auth card -->
+    <section class="auth">
+      <div class="card">
+        <div class="tabs">
+          <button class="tab active" data-tab="login">Login</button>
+          <button class="tab" data-tab="register">Register</button>
+        </div>
+
+        <!-- LOGIN -->
+        <form id="login" class="pane active" onsubmit="return doLogin(event)">
+          <label>Email</label>
+          <input id="login-email" type="email" autocomplete="username" placeholder="you@example.com" required>
+          <label>Password</label>
+          <input id="login-pass" type="password" autocomplete="current-password" placeholder="••••••••" required>
+          <button class="primary" type="submit">Sign in</button>
+          <div id="login-msg" class="msg"></div>
+        </form>
+
+        <!-- REGISTER -->
+        <form id="register" class="pane" onsubmit="return doRegister(event)">
+          <label>Email</label>
+          <input id="reg-email" type="email" autocomplete="username" placeholder="you@example.com" required>
+          <label>Password</label>
+          <input id="reg-pass" type="password" autocomplete="new-password" placeholder="Create a password" required>
+          <button class="primary" type="submit">Create account</button>
+          <div id="reg-msg" class="msg"></div>
+        </form>
+
+        <div class="help">
+          <span>No account?</span>
+          <a href="#" onclick="switchTab('register'); return false;">Create one</a>
+          <span> • </span>
+          <a href="#" onclick="switchTab('login'); return false;">I already have an account</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/login.js"></script>
+</body>
+</html>
